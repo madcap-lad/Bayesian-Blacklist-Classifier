@@ -2,7 +2,7 @@
 from TrainingSetsUtil import *
 
 # c is an experimentally obtained value
-def classify(message, training_set, prior = 0.5, c = 3.7e-4):
+def classify(message, training_set, prior = 0.2, c = 3.7e-4):
     
     """
     Returns the probability that the given message is of the given type of
