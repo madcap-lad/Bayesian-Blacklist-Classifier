@@ -1,7 +1,7 @@
 
 from TrainingSetsUtil import *
 
-# c is an experimentally obtained value
+# c is an experimentally obtained value- minimum valye for word not found in training set
 def classify(message, training_set, prior = 0.2, c = 3.7e-4):
     
     """
@@ -27,7 +27,7 @@ def classify(message, training_set, prior = 0.2, c = 3.7e-4):
 mail_msg = 'Recipient address'
 print('')
 #
-## 0.2 and 0.8 because the ratio of samples for spam and ham were the 0.5-1
+## 0.3 and 0.6 because the ratio of samples for blacklisted and non-blocked
 spam_probability = classify(mail_msg, spam_training_set, 0.3)
 ham_probability = classify(mail_msg, ham_training_set, 0.6)
 if spam_probability > ham_probability:
